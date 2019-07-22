@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.User">
+        <id column="U_ID" property="U_ID" />
+        <result column="U_LoginID" property="U_LoginID" />
+        <result column="U_NickName" property="U_NickName" />
+        <result column="U_SignTure" property="U_SignTure" />
+        <result column="U_Sex" property="U_Sex" />
+        <result column="U_Telephone" property="U_Telephone" />
+        <result column="U_Name" property="U_Name" />
+        <result column="U_Email" property="U_Email" />
+        <result column="U_HeadPortrait" property="U_HeadPortrait" />
+        <result column="U_Age" property="U_Age" />
+        <result column="U_CreateTime" property="U_CreateTime" />
+        <result column="U_UpdateTime" property="U_UpdateTime" />
+        <result column="U_Password" property="U_Password" />
+    </resultMap>
+    <select id="selectUser" resultType="com.example.demo.entity.User" parameterType="com.example.demo.entity.User">
+    
+     select * from user where U_LoginID=#{U_LoginID} and U_Password=#{U_Password}
+    </select>
+
+</mapper>

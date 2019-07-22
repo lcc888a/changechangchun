@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.FriendgroupsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.Friendgroups">
+        <id column="FG_ID" property="FG_ID" />
+        <result column="FG_Name" property="FG_Name" />
+        <result column="FG_UserID" property="FG_UserID" />
+    </resultMap>
+
+</mapper>

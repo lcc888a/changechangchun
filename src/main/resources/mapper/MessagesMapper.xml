@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.MessagesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.entity.Messages">
+        <id column="M_ID" property="M_ID" />
+        <result column="M_PostMessages" property="M_PostMessages" />
+        <result column="M_status" property="M_status" />
+        <result column="M_FromUserID" property="M_FromUserID" />
+        <result column="M_ToUserID" property="M_ToUserID" />
+        <result column="M_Time" property="M_Time" />
+    </resultMap>
+
+</mapper>

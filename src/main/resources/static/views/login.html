@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html oncontextmenu="return false" ondragstart="return false" onbeforecopy="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()">
+<head lang="zh-cn">
+<title>登录 - 榨油机智能后台管理系统</title>
+ <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+<c:import url="pagehead.jsp"></c:import>
+<style type="text/css">
+	* {
+	margin: 0px auto;
+	padding: 0px;
+	
+}
+body{
+	background: url(<j:staticPath />static/images/images/bage.png) repeat-x;
+}
+/*头部*/
+header {
+	width: 100%;
+	height: 100px;
+	min-width: 900px;
+}
+/*内容*/
+.content{
+	width: 100%;
+	height: 800px;
+}
+.title{
+	width: 650px;
+	height: 65px;
+	color: blue;
+	text-align: center;
+	font-size: 50px;
+	letter-spacing: 2px;
+	/*box-shadow: 0 0 10px 5px #999;*/
+	/*text-shadow: 10px 10px 10px 5px #999;*/
+	text-shadow: 3px 3px 5px #000;
+}
+.logo_bag {
+	width: 550px;
+    height: 420px;
+	margin-top: 50px;
+	background: url(<j:staticPath />static/images/images/juxing.png) repeat-x;
+	background-size: 100% 100%;
+
+
+}
+
+.getuser{
+	height: 56px;
+    width: 93%;
+    display: flex;
+    align-self: center;
+    line-height: 75px;
+}
+.user_login{
+	color:#0282BA;
+	font-size: 24px;
+
+}
+.go_login{
+	color: #FF7800;
+	font-size:14px;
+}
+
+
+.biao {
+	width: 400px;
+	height: 40px;
+	border: 0px;
+	margin: 0 auto;
+	margin-top: 36px;
+	border: 1px solid #999;
+	background: #fff;
+	
+	display: flex;
+	align-self: center;
+}
+.biao input{
+	height:40px;
+	width:85%;
+	margin-right:10px;
+	border:none;
+}
+.get_password{
+	width: 400px;
+	padding: 20px 50px;
+}
+.get_password input {
+	outline: none;
+	border: 0px;
+}
+.top{
+	margin-top:34px;
+}
+.biao b {
+	    width: 28px;
+    height: 28px;
+    background: url(<j:staticPath />static/images/images/user.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    float: left;
+        margin-top: 1%;
+}
+.top b {
+   width: 28px;
+    height: 28px;
+	background: url(<j:staticPath />static/images/images/password.png);
+	  background-size: 100% 100%;
+	display: inline-block;
+	float: left;
+}
+.xieyi {
+	color: #ccc;
+	font-weight: bold;
+	font-size: 12px;
+	display: flex;
+    margin: 5% auto;
+    justify-content: space-between;
+}
+.repass {
+	color: #FF7800;
+}
+.anniu {
+	width: 400px;
+	height: 40px;
+	border: 0px;
+	margin: 0 auto;
+	margin-top: 20px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #FF7800;
+	border-radius: 5px;
+}
+.cent{
+	margin: 0 auto;
+	text-align: center;
+}
+/*底部*/
+footer {
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 250px;
+	text-align: center;
+	background: #0A232E;
+min-width: 900px;
+}
+
+.foot{
+line-height: 100px;
+	color:#fff;
+	font-size: 12px;
+}
+</style>
+</style>
+</head>
+<body>
+	<!--[if lte IE 9]>
+	<p class="browsehappy">你正在使用过时的浏览器，为了更好的效果请升级至IE 10.0以上。 请<a href="http://browsehappy.com/" target="_blank">升级浏览器</a>以获得更好的体验！</p>
+	<![endif]-->
+	
+			<form id="form1" action="index" method="post" >
+<div class="content">
+	<div class="title">Welcome 迅升聊天室</div>
+	
+		
+		
+		        <div class="biao"><input type="text" placeholder="账号" id="username" name="U_LoginID" ></div>
+               <div class="biao top"><input type="password" placeholder="密码" id="password" name="U_Password"></div>
+   <div class="cent">
+            <input type="button" name="sub" id="sub"  class="anniu" value="登 录">
+            <input type="hidden" id="error" value="${error}">
+</div>
+</div>
+       
+        </form>  
+
+	<div class="foot">版权所有</div>
+
+
+</body>
+<script type="text/javascript">
+$(function() {
+	$("#sub").click(function() {
+		
+		var username=$("#username").val();
+		var password=$("#password").val();
+		if(username=="" || password==""){
+			alert("用户名与密码不得为空");
+			return;
+		}
+		
+		$("#form1").submit();
+	});
+		
+	document.onkeydown = function(evt) {
+	    evt = window.event? window.event: evt;
+	    if (evt.keyCode==13) {
+	    	$("#sub").click();
+	    }
+	};
+});
+</script>
+
+<script type="text/javascript">
+  
+    
+   
+</script>
+
+</html>
